@@ -1,6 +1,6 @@
 /**
-   * Create By Dika Ardnt.
-   * Contact Me on wa.me/6288292024190
+   * Create By Agus bot.
+   * Contact Me on wa.me/6285738639969
    * Follow https://github.com/DikaArdnt
 */
 
@@ -18,12 +18,12 @@ global.APIKeys = {
 }
 
 // Other
-global.owner = ['6288221255023']
-global.premium = ['6288221255023']
-global.namaowner = ['NelJagoNyatir']
-global.namabot = ['NelzBot']
-global.packname = 'Created By IpanJagoNyatir'
-global.author = 'NelBotz'
+global.owner = ['6285738639969']
+global.premium = ['6285738639969']
+global.namaowner = ['Agus']
+global.namabot = ['CrashBot']
+global.packname = 'Created By Agus'
+global.author = 'CrashBotz'
 global.sessionName = 'hisoka'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
