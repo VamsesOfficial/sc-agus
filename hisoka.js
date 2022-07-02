@@ -4244,7 +4244,7 @@ let btn = [{
                                     id: 'command'
                                 }
                             }]
-                        hisoka.send5ButImg(m.chat, anu, 'NelzBotz', global.thumb, btn)
+                        hisoka.send5ButImg(m.chat, anu, 'CrashBotz', global.thumb, btn)
                      }
             break
 
@@ -4284,7 +4284,7 @@ let btn = [{
                                     id: 'command'
                                 }
                             }]
-                        hisoka.send5ButImg(m.chat, anu, 'NelzBotz', global.thumb, btn)
+                        hisoka.send5ButImg(m.chat, anu, 'CrashBotz', global.thumb, btn)
                      }
             break
             default:
