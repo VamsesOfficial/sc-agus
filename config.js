@@ -1,6 +1,6 @@
 /**
    * Create By Crash bot.
-   * Contact Me on wa.me/6289508502464
+   * Contact Me on wa.me/6285738639969
    * Follow https://github.com/DikaArdnt
 */
 
@@ -18,8 +18,8 @@ global.APIKeys = {
 }
 
 // Other
-global.owner = ['6289508502464']
-global.premium = ['6289508502464']
+global.owner = ['6285738639969']
+global.premium = ['6285738639969']
 global.namaowner = ['Crash']
 global.namabot = ['CrashBot']
 global.packname = 'Created By Crash'
