@@ -472,40 +472,6 @@ Selama ${clockString(new Date - user.afkTime)}
        }
        break
        
-case 'halo': {
-       result = fs.readFileSync(`./src/halo.opus`)
-       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-       }
-       break
-       
-case 'kontol': {
-       result = fs.readFileSync(`./src/toxic2.opus`)
-       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-       }
-       break
-       
-case 'kontol': {
-       result = fs.readFileSync(`./src/asu.opus`)
-       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-       }
-       break
-       
-case 'asu': {
-       result = fs.readFileSync(`./src/toxic2.opus`)
-result2 = fs.readFileSync(`./src/kontol.opus`)
-       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-       hisoka.sendMessage(m.chat, { audio: result2, mimetype: 'audio/mp4', ptt: true }, { quoted: m })    
-       }
-       break
-       
-case 'kontol': {
-       result = fs.readFileSync(`./src/toxic2.opus`)
-result2 = fs.readFileSync(`./src/kontol.opus`)
-       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-       hisoka.sendMessage(m.chat, { audio: result2, mimetype: 'audio/mp4', ptt: true }, { quoted: m })    
-       }
-       break
-
 case 'ngentod': {
        result = fs.readFileSync(`./src/toxic2.opus`)
 result2 = fs.readFileSync(`./src/kontol.opus`)
