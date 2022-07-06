@@ -471,12 +471,6 @@ Selama ${clockString(new Date - user.afkTime)}
        }
        break
        
-case 'halo': {
-       result = fs.readFileSync(`./src/halo.opus`)
-       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-       }
-       break
-       
 case 'kontol': {
        result = fs.readFileSync(`./src/toxic2.opus`)
        hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
