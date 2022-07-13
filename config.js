@@ -18,7 +18,8 @@ global.APIKeys = {
 }
 
 // Other
-global.owner = ['6285738639969,6287789210430']
+global.owner = ['6285738639969']
+global.owner = ['6287789210430']
 global.premium = ['6285738639969']
 global.namaowner = ['Crash']
 global.namabot = ['CrashBot']
