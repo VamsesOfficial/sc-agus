@@ -487,6 +487,12 @@ result2 = fs.readFileSync(`./src/kontol.opus`)
        hisoka.sendMessage(m.chat, { audio: result2, mimetype: 'audio/mp4', ptt: true }, { quoted: m })    
        }
        break
+
+case 'woy': {
+       result = fs.readFileSync(`./src/mama.opus`)
+       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+       }
+       break
        //━━━━━━━━━━━━━━━[ FITUR HENTAI ]━━━━━━━━━━━━━━━━━//
         case 'waifuanime': {
  waifudd = await axios.get(`https://api.waifu.pics/sfw/waifu`)
