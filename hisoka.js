@@ -486,7 +486,7 @@ case 'woy': {
        }
        break
 
-case 'aku mau tidur dulu ya': {
+case 'tidur': {
        result = fs.readFileSync(`./src/nyem.opus`)
        hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
        }
