@@ -472,14 +472,6 @@ Selama ${clockString(new Date - user.afkTime)}
        }
        break
        
-case 'ngentod': {
-       result = fs.readFileSync(`./src/toxic2.opus`)
-result2 = fs.readFileSync(`./src/kontol.opus`)
-       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-       hisoka.sendMessage(m.chat, { audio: result2, mimetype: 'audio/mp4', ptt: true }, { quoted: m })    
-       }
-       break
-       
 case 'memek': {
        result = fs.readFileSync(`./src/toxic2.opus`)
 result2 = fs.readFileSync(`./src/kontol.opus`)
@@ -490,6 +482,12 @@ result2 = fs.readFileSync(`./src/kontol.opus`)
 
 case 'woy': {
        result = fs.readFileSync(`./src/mama.opus`)
+       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+       }
+       break
+
+case 'aku mau tidur dulu ya': {
+       result = fs.readFileSync(`./src/nyem.opus`)
        hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
        }
        break
