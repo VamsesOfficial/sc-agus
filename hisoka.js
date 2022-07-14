@@ -491,6 +491,12 @@ case 'tidur': {
        hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
        }
        break
+
+case 'hai': {
+       result = fs.readFileSync(`./src/cess.opus`)
+       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+       }
+       break
        //━━━━━━━━━━━━━━━[ FITUR HENTAI ]━━━━━━━━━━━━━━━━━//
         case 'waifuanime': {
  waifudd = await axios.get(`https://api.waifu.pics/sfw/waifu`)
