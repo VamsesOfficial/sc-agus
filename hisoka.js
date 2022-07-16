@@ -485,10 +485,10 @@ klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] }
                 m.reply(`Antilink Tidak Aktif !`)
                 } else {
                  let buttons = [
-                        { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
-                        { buttonId: 'antilink off', buttonText: { displayText: 'Off' }, type: 1 }
+                        { buttonId: 'antilink on', buttonText: { displayText: 'ON' }, type: 1 },
+                        { buttonId: 'antilink off', buttonText: { displayText: 'OFF' }, type: 1 }
                     ]
-                    await hisoka.sendButtonText(m.chat, buttons, `Mode Antilink`, 'Crash', m)
+                    await hisoka.sendButtonText(m.chat, buttons, `Mode Antilink`, 'NelzBotz', m)
                 }
              }
              break
