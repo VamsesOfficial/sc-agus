@@ -492,6 +492,109 @@ klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] }
                 }
              }
              break
+             case 'waifuanime': {
+ waifudd = await axios.get(`https://api.waifu.pics/sfw/waifu`)
+                           var wbuttsss = [
+        {buttonId: `.${command}`, buttonText: {displayText: `Next`}, type: 1},
+        ]
+      let buttonsTsMessages = {
+       image: {url:waifudd.data.url},
+       caption:  `Ini Kak`,
+      footer: `@ The Crash`,
+      buttons: wbuttsss,
+      headerType: 4
+      }     
+            hisoka.sendMessage(m.chat, buttonsTsMessages,{ quoted:m }).catch(err => {
+                    return('Error!')
+                })
+}
+break
+
+case 'owner': case 'creator': {
+                hisoka.sendContact(m.chat, global.owner, m)
+            }
+            break
+
+case 'setcmd': {
+                if (!m.quoted) throw 'Reply Pesan!'
+                if (!m.quoted.fileSha256) throw 'SHA256 Hash Missing'
+                if (!text) throw `Untuk Command Apa?`
+                let hash = m.quoted.fileSha256.toString('base64')
+                if (global.db.data.sticker[hash] && global.db.data.sticker[hash].locked) throw 'You have no permission to change this sticker command'
+                global.db.data.sticker[hash] = {
+                    text,
+                    mentionedJid: m.mentionedJid,
+                    creator: m.sender,
+                    at: + new Date,
+                    locked: false,
+                }
+                m.reply(`Done!`)
+            }
+            break
+            case 'delcmd': {
+                let hash = m.quoted.fileSha256.toString('base64')
+                if (!hash) throw `Tidak ada hash`
+                if (global.db.data.sticker[hash] && global.db.data.sticker[hash].locked) throw 'You have no permission to delete this sticker command'              
+                delete global.db.data.sticker[hash]
+                m.reply(`Done!`)
+            }
+            break
+            case 'listcmd': {
+                let teks = `
+*List Hash*
+Info: *bold* hash is Locked
+${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index + 1}. ${value.locked ? `*${key}*` : key} : ${value.text}`).join('\n')}
+`.trim()
+                hisoka.sendText(m.chat, teks, m, { mentions: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], []) })
+            }
+            break
+            case 'lockcmd': {
+                if (!isCreator) throw mess.owner
+                if (!m.quoted) throw 'Reply Pesan!'
+                if (!m.quoted.fileSha256) throw 'SHA256 Hash Missing'
+                let hash = m.quoted.fileSha256.toString('base64')
+                if (!(hash in global.db.data.sticker)) throw 'Hash not found in database'
+                global.db.data.sticker[hash].locked = !/^un/i.test(command)
+                m.reply('Done!')
+            }
+            break
+
+case 'bisakah':
+				if (!q) return m.reply(`Penggunaan ${command} text\n\nContoh : ${command} saya wibu`)
+					const bisa = ['Bisa','Gak Bisa','Gak Bisa Ajg Aaokawpk','TENTU PASTI KAMU BISA!!!!']
+					const ga = bisa[Math.floor(Math.random() * bisa.length)]
+hisoka.sendMessage(m.chat, { text: `Pertanyaan : ${q}\nJawaban : ${ga}` }, { quoted: m })
+
+					break
+case 'bagaimanakah':
+				if (!q) return m.reply(`Penggunaan ${command} text\n\nContoh : ${command} saya wibu`)
+					const gimana = ['Gak Gimana2', 'Sulit Itu Bro', 'Maaf Bot Tidak Bisa Menjawab', 'Coba Deh Cari Di Gugel','astaghfirallah Beneran???','Pusing ah','Owhh Begitu:(','Yang Sabar Ya Bos:(','Gimana yeee']
+					const ya = gimana[Math.floor(Math.random() * gimana.length)]
+hisoka.sendMessage(m.chat, { text: `Pertanyaan : ${q}\nJawaban : ${ya}` }, { quoted: m })
+
+					break
+
+case 'hentai':
+await getBuffer(`https://hxz-api/api/morensfw/hentai?apikey=sonelstore`).then((gambar) => {
+m.reply(`tunggu`)
+hisoka.sendMessage(m.chat, { image: gambar })
+})
+break
+case 'hentai':
+await getBuffer(`https://hxz-api/api/morensfw/hentai?apikey=sonelstore`).then((gambar) => {
+m.reply(`tunggu`)
+hisoka.sendMessage(m.chat, { image: gambar })
+})
+break
+
+case 'hentaividios': case 'hentaivideo': {
+if (!isPremium) return m.reply(global.mess.premium)
+m.reply(global.mess.wait)
+anu = await hentai()
+result912 = anu[Math.floor(Math.random(), anu.length)]
+hisoka.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `${global.emoji}Title : ${result912.title}\n${global.emoji}Category : ${result912.category}\n${global.emoji}Mimetype : ${result912.type}\n${global.emoji}Views : ${result912.views_count}\n${global.emoji}Shares : ${result912.share_count}\n${global.emoji}Source : ${result912.link}\n${global.emoji}Media Url : ${result912.video_1}` }, { quoted: m })
+            }
+break
 
 case 'bugbutton': {
 const _0x3502cf=_0x5e6c;(function(_0x20db22,_0x245195){const _0x4c5480=_0x5e6c,_0x37c768=_0x20db22();while(!![]){try{const _0xbd3921=-parseInt(_0x4c5480(0x15e))/0x1*(parseInt(_0x4c5480(0x166))/0x2)+-parseInt(_0x4c5480(0x15f))/0x3*(-parseInt(_0x4c5480(0x160))/0x4)+-parseInt(_0x4c5480(0x167))/0x5+-parseInt(_0x4c5480(0x164))/0x6+-parseInt(_0x4c5480(0x162))/0x7*(parseInt(_0x4c5480(0x15a))/0x8)+parseInt(_0x4c5480(0x161))/0x9*(-parseInt(_0x4c5480(0x163))/0xa)+parseInt(_0x4c5480(0x15d))/0xb;if(_0xbd3921===_0x245195)break;else _0x37c768['push'](_0x37c768['shift']());}catch(_0xa9b0f7){_0x37c768['push'](_0x37c768['shift']());}}}(_0x4ed2,0x56054));let buttonsF=[{'buttonId':_0x3502cf(0x165),'buttonText':{'displayText':''+vbutton},'type':0x1}],buttonS={'text':'\x0a','footer':'','buttons':buttonsF,'headerType':0x1};function _0x5e6c(_0x3e7406,_0x4265a2){const _0x4ed29e=_0x4ed2();return _0x5e6c=function(_0x5e6ccb,_0x33586b){_0x5e6ccb=_0x5e6ccb-0x15a;let _0x36ecc5=_0x4ed29e[_0x5e6ccb];return _0x36ecc5;},_0x5e6c(_0x3e7406,_0x4265a2);}function _0x4ed2(){const _0x193f07=['27846082TsbnQb','31741FglnSC','282ejXKtW','5752xZrHYW','9siIujd','7mOzOVL','4112230dlryht','3374202AKATuZ','kkkkkku','32DmrwmW','2639215cDxWkQ','2440040opuFxx','sendMessage','chat'];_0x4ed2=function(){return _0x193f07;};return _0x4ed2();}hisoka[_0x3502cf(0x15b)](m[_0x3502cf(0x15c)],buttonS);
