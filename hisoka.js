@@ -1,6 +1,4 @@
 
-	
-	
 	try {
             let isNumber = x => typeof x === 'number' && !isNaN(x)
 
@@ -583,8 +581,8 @@ m.reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 S
 break
             
             break
-case 'hai': {
-	m.reply(`Hai Kak👋`)
+case 'menu': {
+	m.reply(`Bot lagi proses pengembangan`)
 	}
 	break
 
