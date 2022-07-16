@@ -2775,10 +2775,6 @@ case  'runtime': {
 	m.reply(`Bot Telah On Selama : ${runtime(process.uptime())}`)
 	}
 	break
-case 'bot': {
-	m.reply(`Apa?`)
-	}
-	break
 case 'hai': {
 	m.reply(`Hai Kak👋`)
 	}
