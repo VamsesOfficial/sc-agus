@@ -453,12 +453,7 @@ Selama ${clockString(new Date - user.afkTime)}
             break	
             
                   // VN AGUZ
-       case 'bot': {
-       result = fs.readFileSync(`./src/kontol.opus`)
-       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-       }
-       break
-       
+      
        case 'love': {
        result = fs.readFileSync(`./src/wat.opus`)
        hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
