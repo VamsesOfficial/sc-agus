@@ -92,12 +92,14 @@ module.exports = hisoka = async (hisoka, m, chatUpdate, store) => {
                 mute: false,
                 antilink: false,
             }
+
 let kontol = /(bot kontol)/i
 
     let iskontol = kontol.exec(m.text)
     if (iskontol && !m.fromMe) {
        conn.sendFile(m.chat, fs.readFileSync('./src/WhatsApp-Audio-2021-04-01-at-14.11.16.opus'), '', '', m, true)
     }		
+
 	    let setting = global.db.data.settings[botNumber]
             if (typeof setting !== 'object') global.db.data.settings[botNumber] = {}
 	    if (setting) {
