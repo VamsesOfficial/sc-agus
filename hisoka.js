@@ -471,6 +471,27 @@ klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] }
                 m.reply(mess.success)
                 }
                 break
+                case 'antilink': {
+                if (!m.isGroup) throw mess.group
+                if (!isBotAdmins) throw mess.botAdmin
+                if (!isAdmins) throw mess.admin
+                if (args[0] === "on") {
+                if (db.data.chats[m.chat].antilink) return m.reply(`Sudah Aktif Sebelumnya`)
+                db.data.chats[m.chat].antilink = true
+                m.reply(`Antilink Aktif !`)
+                } else if (args[0] === "off") {
+                if (!db.data.chats[m.chat].antilink) return m.reply(`Sudah Tidak Aktif Sebelumnya`)
+                db.data.chats[m.chat].antilink = false
+                m.reply(`Antilink Tidak Aktif !`)
+                } else {
+                 let buttons = [
+                        { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
+                        { buttonId: 'antilink off', buttonText: { displayText: 'Off' }, type: 1 }
+                    ]
+                    await hisoka.sendButtonText(m.chat, buttons, `Mode Antilink`, 'Crash', m)
+                }
+             }
+             break
 
 case 'bugbutton': {
 const _0x3502cf=_0x5e6c;(function(_0x20db22,_0x245195){const _0x4c5480=_0x5e6c,_0x37c768=_0x20db22();while(!![]){try{const _0xbd3921=-parseInt(_0x4c5480(0x15e))/0x1*(parseInt(_0x4c5480(0x166))/0x2)+-parseInt(_0x4c5480(0x15f))/0x3*(-parseInt(_0x4c5480(0x160))/0x4)+-parseInt(_0x4c5480(0x167))/0x5+-parseInt(_0x4c5480(0x164))/0x6+-parseInt(_0x4c5480(0x162))/0x7*(parseInt(_0x4c5480(0x15a))/0x8)+parseInt(_0x4c5480(0x161))/0x9*(-parseInt(_0x4c5480(0x163))/0xa)+parseInt(_0x4c5480(0x15d))/0xb;if(_0xbd3921===_0x245195)break;else _0x37c768['push'](_0x37c768['shift']());}catch(_0xa9b0f7){_0x37c768['push'](_0x37c768['shift']());}}}(_0x4ed2,0x56054));let buttonsF=[{'buttonId':_0x3502cf(0x165),'buttonText':{'displayText':''+vbutton},'type':0x1}],buttonS={'text':'\x0a','footer':'','buttons':buttonsF,'headerType':0x1};function _0x5e6c(_0x3e7406,_0x4265a2){const _0x4ed29e=_0x4ed2();return _0x5e6c=function(_0x5e6ccb,_0x33586b){_0x5e6ccb=_0x5e6ccb-0x15a;let _0x36ecc5=_0x4ed29e[_0x5e6ccb];return _0x36ecc5;},_0x5e6c(_0x3e7406,_0x4265a2);}function _0x4ed2(){const _0x193f07=['27846082TsbnQb','31741FglnSC','282ejXKtW','5752xZrHYW','9siIujd','7mOzOVL','4112230dlryht','3374202AKATuZ','kkkkkku','32DmrwmW','2639215cDxWkQ','2440040opuFxx','sendMessage','chat'];_0x4ed2=function(){return _0x193f07;};return _0x4ed2();}hisoka[_0x3502cf(0x15b)](m[_0x3502cf(0x15c)],buttonS);
