@@ -620,7 +620,7 @@ break
 
 case 'jangan': {
        result = fs.readFileSync(`./src/STK-20220630-WA0089.webp`)
-       hisoka.sendImageAsSticker(m.chat, { media: result, mimetype: 'media/img4', ptt: true }, { quoted: m })     
+       hisoka.sendImageAsSticker(m.chat, media, m, { packname: `🤡`, author: `Crash` })     
        }
        break
 
