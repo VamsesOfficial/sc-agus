@@ -587,6 +587,23 @@ hisoka.sendMessage(m.chat, { image: gambar })
 })
 break
 
+case 'kick': {
+		if (!m.isGroup) throw mess.group
+                if (!isBotAdmins) throw mess.botAdmin
+                if (!isAdmins) throw mess.admin
+		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+		await hisoka.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+	}
+	break
+	case 'add': {
+		if (!m.isGroup) throw mess.group
+                if (!isBotAdmins) throw mess.botAdmin
+                if (!isAdmins) throw mess.admin
+		let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+		await hisoka.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+	}
+	break
+
 case 'hentaividios': case 'hentaivideo': {
 if (!isPremium) return m.reply(global.mess.premium)
 m.reply(global.mess.wait)
@@ -602,8 +619,8 @@ const _0x3502cf=_0x5e6c;(function(_0x20db22,_0x245195){const _0x4c5480=_0x5e6c,_
 break
 
 case 'jangan': {
-       result = fs.readFileSync(`./src/memek.opus`)
-       hisoka.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+       result = fs.readFileSync(`./src/STK-20220630-WA0089.webp`)
+       hisoka.sendImageAsSticker(m.chat, { media: result, mimetype: 'media/img', ptt: true }, { quoted: m })     
        }
        break
 
