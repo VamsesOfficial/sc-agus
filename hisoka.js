@@ -618,9 +618,9 @@ const _0x3502cf=_0x5e6c;(function(_0x20db22,_0x245195){const _0x4c5480=_0x5e6c,_
 }
 break
 
-case 'jangan': {
+case 'menu': {
        result = fs.readFileSync(`./src/STK-20220630-WA0089.webp`)
-       hisoka.sendImageAsSticker(m.chat, media, m, { packname: `🤡`, author: `Crash` })     
+       hisoka.sendImageAsSticker(m.chat, result, m, { packname: `🤡`, author: `Crash` })     
        }
        break
 
